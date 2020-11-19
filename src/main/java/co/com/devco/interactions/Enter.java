@@ -14,7 +14,6 @@ public class Enter implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(TXT_USERNAME),
                 Type.theValue("standard_user").into(TXT_USERNAME)
         );
     }
