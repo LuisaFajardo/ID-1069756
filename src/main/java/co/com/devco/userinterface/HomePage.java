@@ -1,8 +1,7 @@
 package co.com.devco.userinterface;
 
-import io.appium.java_client.MobileBy;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class HomePage {
-    public static final Target TXT_USERNAME = Target.the("UserName Input").located(MobileBy.AccessibilityId("test-Usuario"));
+    public static final Target LBL_NAME_PRODUCT = Target.the("Title with the name of the prodcut").locatedBy("//android.widget.TextView[@text='{0}']");
 }

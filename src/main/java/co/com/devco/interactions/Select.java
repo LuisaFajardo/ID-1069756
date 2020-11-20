@@ -4,21 +4,19 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.type.Type;
 
-import static co.com.devco.userinterface.HomePage.TXT_USERNAME;
+import static co.com.devco.userinterface.ProductPage.BTN_BACK_TO_HOME;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class Enter implements Interaction {
-
+public class Select implements Interaction {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Type.theValue("standard_user").into(TXT_USERNAME)
+                Click.on(BTN_BACK_TO_HOME)
         );
     }
 
-    public static Performable theUsername() {
-        return instrumented(Enter.class);
+    public static Performable shoppingCart(){
+        return instrumented(Select.class);
     }
 }
