@@ -10,6 +10,10 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+import cucumber.api.java.es.Cuando;
+import cucumber.api.java.es.Dado;
+import cucumber.api.java.es.Entonces;
+import cucumber.api.java.es.Y;
 import net.serenitybdd.screenplay.actors.OnStage;
 import net.serenitybdd.screenplay.actors.OnlineCast;
 import net.serenitybdd.screenplay.ensure.Ensure;
@@ -30,14 +34,14 @@ public class BuyingProductsStepDefinition {
         OnStage.setTheStage(new OnlineCast());
     }
 
-    @Given("that (.*) is login on SwagLabs app")
+    @Dado("that (.*) is login on SwagLabs app")
     public void actorWantsBuyShirts(String actor) {
         theActorCalled(actor).attemptsTo(
                 Login.atSwagLabs()
         );
     }
 
-    @When("He put in the cart the (.*)")
+    @Cuando("He put in the cart the (.*)")
     public void actorPutShirtCart(String nameProduct) {
         theActorInTheSpotlight().attemptsTo(
               AddProduct.toTheCart(nameProduct)
@@ -51,12 +55,12 @@ public class BuyingProductsStepDefinition {
         );
     }
 
-    @And("He do the checkout of his purchase")
+    @Y("He do the checkout of his purchase")
     public void checkoutPurchase() {
         theActorInTheSpotlight().attemptsTo(checkout());
     }
 
-    @Then("He should see that his purchase is successful")
+    @Entonces("He should see that his purchase is successful")
     public void actorShouldSeePurchase() {
         theActorInTheSpotlight().should(seeThat(Purchase.isSuccesful()).orComplainWith(PurchaseIsNotCompleteException.class, PURCHASE_FAILED_MESSAGE_EXCEPTION));
     }
