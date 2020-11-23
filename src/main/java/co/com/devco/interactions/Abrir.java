@@ -5,18 +5,19 @@ import net.serenitybdd.screenplay.Interaction;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.actions.Click;
 
-import static co.com.devco.userinterface.ProductPage.BTN_BACK_TO_HOME;
+import static co.com.devco.userinterface.ProductoPage.BTN_VER_CARRITO;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class Select implements Interaction {
+public class Abrir implements Interaction {
+
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(BTN_BACK_TO_HOME)
+                Click.on(BTN_VER_CARRITO)
         );
     }
 
-    public static Performable shoppingCart(){
-        return instrumented(Select.class);
+    public static Performable carritoDeCompras(){
+        return instrumented(Abrir.class);
     }
 }
