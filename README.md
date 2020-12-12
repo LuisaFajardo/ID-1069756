@@ -1,8 +1,8 @@
-#Script de Automatización SerenityBDD E-Commerce Android App
+# Script de Automatización SerenityBDD E-Commerce Android App
 
 Ejemplo de automatización móvil usando SerenityBDD y Appium aplicando patrón Screenplay.
 
-##Consideraciones
+## Consideraciones
 - Tener el celular en modo Debug (Activar Opciones de Desarrollador).
 - Obtener la información del dispositivo con el comando en una terminal.
 
@@ -11,6 +11,7 @@ Ejemplo de automatización móvil usando SerenityBDD y Appium aplicando patrón 
 - Cambiar en el **serenity.properties** los capabilities con la información sobre la cual se desea ejecutar.
 
 `appium.platformVersion =10`
+
 `appium.deviceName = ESU4C18A16000384`
 
 - Tener la App instalada o el Apk en una ruta especifica para indicarla en el **serenity.properties**
@@ -24,6 +25,6 @@ Ejemplo de automatización móvil usando SerenityBDD y Appium aplicando patrón 
 
 - Ruta de Documentación Viva: `C:\Users\xxxxx\serenity_mobile_base_project\target\site\serenity\index.html`
 
-##Links de Interés
+## Links de Interés
 - [Appium Desired Capabilities](http://appium.io/docs/en/writing-running-appium/caps/ "Appium Desired Capabilities")
 - [Serenity System Properties and Configuration](https://serenity-bdd.github.io/theserenitybook/latest/serenity-system-properties.html "Serenity System Properties and Configuration")
