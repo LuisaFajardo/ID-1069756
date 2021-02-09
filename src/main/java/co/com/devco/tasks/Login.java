@@ -20,7 +20,7 @@ public class Login implements Task {
         );
     }
 
-    public static Performable atSwagLabs(){
+    public static Performable enSwagLabs(){
         return instrumented(Login.class);
     }
 }

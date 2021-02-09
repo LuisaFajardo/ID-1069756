@@ -5,8 +5,14 @@ Característica: Realizar Compras en Swaglabs App
   Deseo añadir un producto al carrito
   Para realizar la compra de este.
 
-  Escenario: Comprar productos en Swaglabs
-    Dado que Juan se cuentra en Swaglabs App
+  Escenario: Comprar productos en Swaglabs Exitoso
+    Dado que Juan se encuentra en Swaglabs App
     Cuando El coloca en el carrito la Chamarra Sauce Labs
-    Y El hace el checkout de su compra
-    Entonces El deberia de ver que su compra es exitosa
+    Y El ingresa al carrito
+    Entonces El deberia de ver su producto en el carrito
+
+  Escenario: Comprar productos en Swaglabs Fallido
+    Dado que Juan se encuentra en Swaglabs App
+    Cuando El coloca en el carrito la Chamarra Sauce Labs
+    Y El ingresa al carrito
+    Entonces El deberia de ver un producto en el carrito
