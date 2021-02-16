@@ -14,8 +14,8 @@ public class Login implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Type.theValue("standard_user").into(TXT_USERNAME),
-                Type.theValue("secret_sauce").into(TXT_PASSWORD),
+                Type.theValue("standard_user").into(TXT_USUARIO),
+                Type.theValue("secret_sauce").into(TXT_CLAVE),
                 Click.on(BTN_LOGIN)
         );
     }

@@ -4,7 +4,7 @@ import io.appium.java_client.MobileBy;
 import net.serenitybdd.screenplay.targets.Target;
 
 public class LoginPage {
-    public static final Target TXT_USERNAME = Target.the("Username Input").located(MobileBy.AccessibilityId("test-Usuario"));
-    public static final Target TXT_PASSWORD = Target.the("Password Input").located(MobileBy.AccessibilityId("test-Contrase\u00F1a"));
-    public static final Target BTN_LOGIN = Target.the("Login Button").located(MobileBy.AccessibilityId("test-LOGIN"));
+    public static final Target TXT_USUARIO = Target.the("Campo Usuario").located(MobileBy.AccessibilityId("test-Username"));
+    public static final Target TXT_CLAVE = Target.the("Campo Clave").located(MobileBy.AccessibilityId("test-Password"));
+    public static final Target BTN_LOGIN = Target.the("Boton Login").located(MobileBy.AccessibilityId("test-LOGIN"));
 }
